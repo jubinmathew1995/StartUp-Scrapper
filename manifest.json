@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "StartUp-Scrapper",
+    "description": "This is a Web-App build using HTML, CSS and JS. It helps to extract the relevant information about the startup from the angel list website for startup's.",
+    "browser_action": {
+        "default_title":"StartUp-Scrapper"
+    },
+    "version": "1.0",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "<all_urls>",
+        "storage"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
