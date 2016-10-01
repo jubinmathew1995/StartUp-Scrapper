@@ -3,16 +3,20 @@
     "name": "StartUp-Scrapper",
     "description": "This is a Web-App build using HTML, CSS and JS. It helps to extract the relevant information about the startup from the angel list website for startup's.",
     "browser_action": {
-        "default_title":"StartUp-Scrapper"
+        "default_title":"StartUp-Scrapper",
+        "default_popup":"index.html"
     },
+    "content_scripts": [
+    {
+      "matches": ["http://*/*" , "https://*/*"],
+      "js": ["extract.js"]
+    }
+  ],
     "version": "1.0",
     "permissions": [
         "tabs",
         "activeTab",
         "<all_urls>",
         "storage"
-    ],
-    "background": {
-        "scripts": ["background.js"]
-    }
+    ]
 }
