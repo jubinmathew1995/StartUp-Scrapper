@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var x, m;
     chrome.storage.sync.get('data', function (data) {
         x = data.data;
-        //console.log(x);
+        console.log(x);
         m = x.image.replace('\"', "");
         document.getElementById('log').src = m;
         document.getElementById('name').innerHTML = x.title;
