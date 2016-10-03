@@ -4,14 +4,22 @@ document.addEventListener('DOMContentLoaded', function () {
         x = data.data;
         console.log(x);
         m = x.image.replace('\"', "");
-        document.getElementById('log').src = m;
+		if(m=='' || m== null)
+		{
+			document.getElementById('log').alt = "No Image Found";
+			m = "No Image Found";
+		}
+		else
+		{
+			document.getElementById('log').src = m;
+		}
         document.getElementById('name').innerHTML = x.title;
         document.getElementById('desc').innerHTML = x.description;
         document.getElementById('url').innerText = x.url;
         document.getElementById('loc').innerHTML = x.location;
 		//console.log(x.title,x.location,x.url,x.description,m);
-        //$.post("https://beta.crowdproduct.com/api/product",
-		$.post("https://app.crowdproduct.com/api/product",
+        $.post("https://beta.crowdproduct.com/api/product",
+		//$.post("https://app.crowdproduct.com/api/product",
             {
                 title: x.title,
                 location: x.location,

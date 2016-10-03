@@ -35,6 +35,13 @@ for (var i = 0; i < list_div.length; i++) {
 //console.log(list_h2);
 
 
+
+if(loca == ''|| loca == null)
+	loca = "No Location Found";
+else if(url == '' || url == null)
+	url = "No URL Found";
+else if(list_h2 == '' || list_h2 == null)
+	list_h2 = "No Description found";
 console.log(name);
 console.log(loca);
 console.log(url);
