@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('desc').innerHTML = x.description;
         document.getElementById('url').innerText = x.url;
         document.getElementById('loc').innerHTML = x.location;
-        $.post("https://beta.crowdproduct.com/api/product",
+		//console.log(x.title,x.location,x.url,x.description,m);
+        //$.post("https://beta.crowdproduct.com/api/product",
+		$.post("https://app.crowdproduct.com/api/product",
             {
-                name: x.title,
+                title: x.title,
                 location: x.location,
                 url: x.url,
                 description: x.description,
